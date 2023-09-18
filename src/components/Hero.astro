@@ -1,0 +1,21 @@
+---
+export interface Props {
+    id: String,
+    headline: String,
+    tagline: String,
+}
+
+const { id, headline, tagline } = Astro.props;
+---
+
+<section class="bg-light vh-50 d-flex align-items-center text-center bg-overlay py-5" id=`${id}`>
+    <div class="container">
+
+        <h2 class="display-1 text-light">{headline}</h2>
+        <p class="mb-0 fs-5 text-light">{tagline}
+        </p>
+        <a href="/contact" class="btn btn-primary mt-4">Contact Us</a>
+
+    </div>
+
+</section>

@@ -1,0 +1,22 @@
+---
+export interface Props {
+    featureOne: String,
+    featureTwo: String,
+    featureThree: String,
+    iconOne: String,
+    iconTwo: String,
+    iconThree: String,
+}
+
+const {featureOne = "Open 6 Days a Week", featureTwo = "Same Day Fitting", featureThree = "Cars, Vans, 4x4s & Caravans", iconOne="bi bi-calendar-fill", iconTwo="bi bi-clock-fill", iconThree="bi bi-car-front-fill"} = Astro.props;
+---
+
+<section class="bg-info py-3 text-center d-none d-lg-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-4"><i class=`${iconOne} me-3`></i>{featureOne}</div>
+            <div class="col-4"><i class=`${iconTwo} me-3`></i>{featureTwo}</div>
+            <div class="col-4"><i class=`${iconThree} me-3`></i>{featureThree}</div>
+        </div>
+    </div>
+</section>

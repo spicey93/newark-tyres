@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Call from "../components/Call.astro";
+const pageTitle = "About";
+const description = "Discover Newark Tyres - Your trusted mobile tyre fitting experts dedicated to delivering unparalleled convenience with same-day, 6-day, and out-of-hours services. Learn more about our mission and commitment to keeping you on the move effortlessly.";
+---
+
+<MainLayout pageTitle={pageTitle} description={description}>
+    <Heading mainHeading="About"/>
+    <main class="container py-5">
+        <p>At Newark Tyres, we're not just in the business of fitting tyres; we're in the business of fitting convenience into your life. We understand that a flat tyre can be an unexpected and frustrating disruption to your day. That's why we've dedicated ourselves to providing a mobile tyre fitting service that's as convenient as it is efficient.</p>
+        <h2>Our Mission</h2>
+        <p>Our mission is simple but vital: to keep you moving. We know that your time is precious, and we don't want you to waste it waiting in a tyre shop or dealing with the stress of a flat tyre. Newark Tyres is here to ensure that tyre replacements are no longer a hassle but a seamless, hassle-free experience.</p>
+        <h2>Why Choose Newark Tyres</h2>
+        <ul>
+            <li><strong>Same-Day Fitting:</strong> When you need a tyre replacement, you need it now. We offer same-day fitting services, so you can get back on the road without unnecessary delays.</li>
+            <li><strong>6-Day Service:</strong> We operate six days a week, ensuring that you have access to our mobile tyre fitting services whenever you need them.</li>
+            <li><strong>Out-of-Hours Availability:</strong> A flat tyre can happen at any moment, which is why we offer an out-of-hours callout service in case you need an emergency tyre replacement.</li>
+        </ul>
+        <h2>Our Team</h2>
+        <p>Our team of skilled technicians is the backbone of Newark Tyres. They're not just experts in their field; they're dedicated professionals who take pride in their work. When you choose Newark Tyres, you're choosing a team committed to your safety and satisfaction.</p>
+        <h2>How It Works</h2>
+        <p>Getting your tyres fitted with Newark Tyres is easy. Simply reach out to us to schedule an appointment, and we'll come to your location with all the necessary equipment. You don't have to lift a finger – we'll handle everything from start to finish.</p>
+        <h2>Our Commitment</h2>
+        <p>We're committed to providing top-quality service that exceeds your expectations. Your convenience and peace of mind are our priorities. When you choose Newark Tyres, you're choosing a company that cares about making your life easier.</p>
+        <h2>Contact Us</h2>
+        <p>Ready to experience the convenience of mobile tyre fitting? Contact Newark Tyres today to book your appointment. We're here to keep you moving, no matter where you are.</p>
+        <p>Choose Newark Tyres for mobile tyre fitting because we believe that quality and convenience should always go hand in hand.</p>
+    </main>
+    <Call />
+</MainLayout>

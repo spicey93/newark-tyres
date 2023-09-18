@@ -1,0 +1,12 @@
+
+.bg-overlay {
+    box-shadow:inset 0 0 0 2000px rgba(33, 37, 41, 0.85);
+}
+
+.vh-50 {
+    min-height: 50vh;
+}
+
+#heroHome, #heroMTF, #heroMPR, #heroLWNR, #heroBatteries, #heroBrakes, #heroTPMS, #heroAlloygator {
+    background-image: url("/car-tyres.jpg");
+}
