@@ -8,15 +8,29 @@ export interface Props {
 const { id, headline, tagline } = Astro.props;
 ---
 
+
 <section class="bg-light vh-50 d-flex align-items-center text-center bg-overlay py-5" id=`${id}`>
     <div class="container">
 
         <h2 class="display-1 text-light">{headline}</h2>
         <p class="mb-0 fs-5 text-light">{tagline}
         </p>
-        <a href="tel:01636330055" class="btn btn-primary mt-4 mb-5">Call Now</a>
+        <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-4">
+            <form action="https://garage-bookings.com" method="get" class="mt-5">
+                <input type="hidden" name="clientID" value="537">
+                <input type="hidden" name="homeURL" value="https://newarktyres.co.uk/success">
+                <input type="hidden" name="skipConfirmationPage" value="n">
+                <input type="hidden" name="language" value="en">
+                <p class="text-light">Book Online Today</p>
+                <div class="input-group">
+                    <input type="text" name="vrm" id="vrm" placeholder="Enter Reg" class="form-control fw-bold form-control-lg text-uppercase">
+                    <button class="btn-primary btn">Go</button>
+                </div>
+            </form>
+        </div>
+        <!-- <a href="tel:01636330055" class="btn btn-primary mt-4 mb-5">Call Now</a> -->
         <br>
-        <span class="bg-light p-3 rounded-3">Rated <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> on Google</span>
+        <!-- <span class="bg-light p-3 rounded-3">Rated <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> on Google</span> -->
 
     </div>
 
