@@ -13,10 +13,16 @@ const iconThree = "bi bi-car-front-fill";
 const featureOne = "Open 7 Days a Week";
 const featureTwo = "Same Day Service";
 const featureThree = "All Car Makes & Models";
-
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import Hero from "../../components/Hero.astro";
+import Feature from "../../components/Feature.astro";
+import Content from "../../components/Content.astro";
 ---
 
-<ServiceLayout pageTitle={pageTitle} description={description} heroHeadline={heroHeadline} heroId={heroId} heroTagline={heroTagline} contentHeading={contentHeading} contentSubheading={contentSubheading} iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree}>
+<ServiceLayout pageTitle={pageTitle} description={description}>
+    <Hero id={heroId} headline={heroHeadline} tagline={heroTagline}/>
+    <Feature iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree} />
+    <Content headingOne={contentHeading} headingTwo={contentSubheading}> 
     <p>At Newark Tyres, we provide a mobile locking wheel nut removal service across many areas of Newark and Sherwood. If you've lost your locking wheel nut key, or the wheel nuts have been over-tightened, we can come to you at home or roadside and remove them today. Send us a message to get a quote.</p>
+    </Content>
 </ServiceLayout>

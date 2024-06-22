@@ -15,8 +15,15 @@ const featureTwo = "Same Day Fitting";
 const featureThree = "Cars, Vans, 4x4s & Caravans";
 
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import Hero from "../../components/Hero.astro";
+import Feature from "../../components/Feature.astro";
+import Content from "../../components/Content.astro";
 ---
 
-<ServiceLayout pageTitle={pageTitle} description={description} heroHeadline={heroHeadline} heroId={heroId} heroTagline={heroTagline} contentHeading={contentHeading} contentSubheading={contentSubheading} iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree}>
+<ServiceLayout pageTitle={pageTitle} description={description}>
+    <Hero id={heroId} headline={heroHeadline} tagline={heroTagline}/>
+    <Feature iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree} />
+    <Content headingOne={contentHeading} headingTwo={contentSubheading}> 
     <p>If you've got a faulty TPMS light and need a new tyre pressure sensor fitted at home, we can help. Our mobile tyre technicians are qualified in dealing with TPMS systems, and we can replace and reprogramme new sensors to any vehicle on the market. Get in touch with us today for a quote.</p>
+    </Content>
 </ServiceLayout>

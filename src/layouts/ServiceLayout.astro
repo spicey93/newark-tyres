@@ -2,36 +2,18 @@
 export interface Props {
     pageTitle: String,
     description: String,
-    heroId: String,
-    heroHeadline: String,
-    heroTagline: String,
-    featureOne: String,
-    featureTwo: String,
-    featureThree: String,
-    iconOne: String,
-    iconTwo: String,
-    iconThree: String,
-    contentHeading: String,
-    contentSubheading: String,
 }
 
 import MainLayout from "./MainLayout.astro";
-import Hero from "../components/Hero.astro";
-import Feature from "../components/Feature.astro";
-import Content from "../components/Content.astro";
 import Call from "../components/Call.astro";
 import AreasCovered from "../components/AreasCovered.astro";
 
 
-const { pageTitle, description, heroId, heroHeadline, heroTagline, featureOne, featureTwo, featureThree, iconOne, iconTwo, iconThree, contentHeading, contentSubheading } = Astro.props;
+const { pageTitle, description } = Astro.props;
 ---
 
 <MainLayout pageTitle={pageTitle} description={description}>
-    <Hero id={heroId} headline={heroHeadline} tagline={heroTagline}/>
-    <Feature iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree} />
-    <Content headingOne={contentHeading} headingTwo={contentSubheading}> 
-        <slot />
-    </Content>
+    <slot />
     <AreasCovered />
     <Call />
 </MainLayout>

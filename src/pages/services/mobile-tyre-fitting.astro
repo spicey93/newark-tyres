@@ -14,11 +14,17 @@ const featureOne = "Open 7 Days a Week";
 const featureTwo = "Same Day Fitting";
 const featureThree = "Cars, Vans, 4x4s & Caravans";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import BookNow from "../../components/BookNow.astro";
+import Feature from "../../components/Feature.astro";
+import Content from "../../components/Content.astro";
 ---
-<ServiceLayout pageTitle={pageTitle} description={description} heroHeadline={heroHeadline} heroId={heroId} heroTagline={heroTagline} contentHeading={contentHeading} contentSubheading={contentSubheading} iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree}>
-   
-    <p>Are you looking to replace your <strong>car tyres at home</strong>? Maybe you've had a blowout and need a <strong>roadside tyre replacement</strong>? In either case, Newark Tyres are your local <strong>mobile tyre fitting service</strong> in Newark & Sherwood.</p>
-    <p>Our expert mobile tyre fitters are available 7 days a week and can come to you <em>today</em>.</p>
-    <p>We keep hundreds of tyre sizes in stock for cars, vans, caravans and trailers - so you can be sure we'll have the right tyre for your vehicle.</p>
-    <p>If you're looking for a <strong>mobile tyre service in Newark</strong> that's professional, reliable, and affordable then give us a call today on <a href="tel:01636330055">01636 33 00 55</a></p>
+<ServiceLayout pageTitle={pageTitle} description={description}>
+    <BookNow id={heroId} headline={heroHeadline} tagline={heroTagline}/>
+    <Feature iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree} />
+    <Content headingOne={contentHeading} headingTwo={contentSubheading}> 
+        <p>Are you looking to replace your <strong>car tyres at home</strong>? Maybe you've had a blowout and need a <strong>roadside tyre replacement</strong>? In either case, Newark Tyres are your local <strong>mobile tyre fitting service</strong> in Newark & Sherwood.</p>
+        <p>Our expert mobile tyre fitters are available 7 days a week and can come to you <em>today</em>.</p>
+        <p>We keep hundreds of tyre sizes in stock for cars, vans, caravans and trailers - so you can be sure we'll have the right tyre for your vehicle.</p>
+        <p>If you're looking for a <strong>mobile tyre service in Newark</strong> that's professional, reliable, and affordable then give us a call today on <a href="tel:01636330055">01636 33 00 55</a></p>
+    </Content>
 </ServiceLayout>
