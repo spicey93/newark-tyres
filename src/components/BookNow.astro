@@ -16,11 +16,11 @@ const { id, headline, tagline } = Astro.props;
         <p class="mb-0 fs-5 text-light">{tagline}
         </p>
         <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-4">
-            <form action="https://mobiletyrebookings-5e066c48bbce.herokuapp.com" method="post" class="mt-5" target="_blank">
-                <p class="text-light">Order Your Tyres Online</p>
+            <form action="https://mobiletyrebookings-5e066c48bbce.herokuapp.com" method="post" class="mb-3 text-center">
+                <h5 class="mb-3 text-light mt-5 fs-3">Get a Quote</h5>
                 <div class="input-group">
-                    <input type="text" name="vrm" id="vrm" placeholder="Enter Reg" class="form-control fw-bold form-control-lg text-uppercase">
-                    <button class="btn-primary btn">Book Now</button>
+                    <input type="text" class="form-control text-center font-monospace fw-bold text-uppercase bg-warning border border-warning fs-3" name="vrm" placeholder="Enter Reg" required>
+                    <button class="btn btn-success fw-bold font-monospace fs-3 text-uppercase rounded-end" type="submit" id="lookUpVRMBtn">Go</button>
                 </div>
             </form>
         </div>
@@ -29,3 +29,11 @@ const { id, headline, tagline } = Astro.props;
     </div>
 
 </section>
+
+
+<script>
+    const lookUpVRMBtn = document.getElementById("lookUpVRMBtn")
+    lookUpVRMBtn.addEventListener("submit", (e) => {
+        lookUpVRMBtn.innerHTML = `<div class="spinner-border" role="status"></div>`
+    })
+</script>
