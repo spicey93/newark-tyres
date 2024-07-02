@@ -14,12 +14,13 @@ const featureOne = "Open 7 Days a Week";
 const featureTwo = "Same Day Fitting";
 const featureThree = "Cars, Vans, 4x4s & Caravans";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import Hero from "../../components/Hero.astro"
 import BookNow from "../../components/BookNow.astro";
 import Feature from "../../components/Feature.astro";
 import Content from "../../components/Content.astro";
 ---
 <ServiceLayout pageTitle={pageTitle} description={description}>
-    <BookNow id={heroId} headline={heroHeadline} tagline={heroTagline}/>
+    <Hero id={heroId} headline={heroHeadline} tagline={heroTagline} />
     <Feature iconOne={iconOne} iconTwo={iconTwo} iconThree={iconThree} featureOne={featureOne} featureTwo={featureTwo} featureThree={featureThree} />
     <Content headingOne={contentHeading} headingTwo={contentSubheading}> 
         <p>Are you looking to replace your <strong>car tyres at home</strong>? Maybe you've had a blowout and need a <strong>roadside tyre replacement</strong>? In either case, Newark Tyres are your local <strong>mobile tyre fitting service</strong> in Newark & Sherwood.</p>
