@@ -1,13 +1,12 @@
 ---
 export interface Props {
-    id: String,
-    headline: String,
-    tagline: String,
+  id: String;
+  headline: String;
+  tagline: String;
 }
 
 const { id, headline, tagline } = Astro.props;
 ---
-
 
 <section class="bg-light vh-50 d-flex align-items-center text-center bg-overlay py-5" id=`${id}`>
     <div class="container">
@@ -16,9 +15,22 @@ const { id, headline, tagline } = Astro.props;
         <p class="mb-0 fs-5 text-light">{tagline}
         </p>
         
-        <a href="tel:01636330044" class="btn btn-primary mt-4 mb-5">Call Now</a>
-        <br>
-        <span class="bg-light p-3 rounded-3">Rated <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> on Google</span>
+        <!-- <a href="tel:01636330044" class="btn btn-primary mt-4 mb-5">Call Now</a> -->
+        <!-- <br> -->
+         <div class="row my-4">
+             <form action="https://garage-bookings.com/" method="get" class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3" target="_blank">
+                 <input type="hidden" name="clientID" value="537">
+                 <input type="hidden" name="homeURL" value="https://newarktyres.co.uk">
+                 <input type="hidden" name="language" value="en">
+                 <input type="hidden" name="skipConfirmationPage" value="n">
+                 <div class="input-group">
+     
+                     <input type="text" name="vrm" class="form-control text-uppercase rounded-0" required placeholder="Enter Reg">
+                     <button class="btn btn-primary">Book Now</button>
+                 </div>
+             </form>
+         </div>
+        <!-- <span class="bg-light p-3 rounded-3">Rated <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> on Google</span> -->
 
     </div>
 
